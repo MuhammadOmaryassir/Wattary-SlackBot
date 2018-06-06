@@ -25,3 +25,18 @@ function MessageParser(str) {
     let TEXT = stri.replace(/,/g, " ")
     return TEXT
 }
+
+function OGWattary(messages) {
+    axios.post('https://watokupp.com/main', {
+            message: messages
+        })
+        .then(res => {
+            mes = res.data.message
+            const params = {
+                icon_emoji: ':robot_face:'
+            }
+            bot.postMessageToChannel('house_of_cards_fans', mes, params)
+
+        })
+}
+
