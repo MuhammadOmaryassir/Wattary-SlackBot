@@ -6,6 +6,9 @@ const bot = new SlackBot({
     name: 'Wattary'
 });
 
+// Error Handler
+bot.on('error', err => console.log(err))
+
 bot.on('start', () => {
     const params = {
         icon_emoji: ':robot_face:'
