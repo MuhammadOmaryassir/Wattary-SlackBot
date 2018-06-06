@@ -15,3 +15,10 @@ bot.on('start', () => {
     bot.postMessageToChannel('house_of_cards_fans', 'Hello , what can i do for you ?', params);
 })
 
+function MessageParser(str) {
+    const fullText = str.split(" ")
+    fullText.splice(0, 1)
+    let stri = fullText.toString()
+    let TEXT = stri.replace(/,/g, " ")
+    return TEXT
+}
