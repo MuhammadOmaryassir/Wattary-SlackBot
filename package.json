@@ -1,7 +1,7 @@
 {
   "name": "slackbot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Wattary Slack Bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
